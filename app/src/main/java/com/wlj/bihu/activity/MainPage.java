@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import com.wlj.bihu.R;
 import com.wlj.bihu.adapter.MyFragmentPagerAdapter;
 import com.wlj.bihu.utils.ActivityController;
+import com.wlj.bihu.utils.view.MyViewPager;
 
 public class MainPage extends BaseActivity {
 
@@ -14,7 +15,8 @@ public class MainPage extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
-        ViewPager viewPager = findViewById(R.id.view_pager);
+        MyViewPager viewPager = findViewById(R.id.view_pager);
+        viewPager.setIsCanScroll(false);
         viewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager()));
         TabLayout tabLayout = findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(viewPager);
