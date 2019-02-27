@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">逼乎</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="edit_account_hint">输入用户名(2–10个字符)</string>
+    <string name="edit_password_hint">输入密码(6–18位)</string>
+    <string name="fast_register">立即注册</string>
+    <string name="user_name_default">用户名</string>
+</resources>

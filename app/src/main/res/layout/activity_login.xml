@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_login_cancel"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:background="@drawable/ic_login_cancel"
+            android:layout_marginLeft="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/app_name"
+            android:textSize="16sp"
+            android:layout_alignTop="@id/btn_login_cancel"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textSize="22sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="28dp"/>
+
+    <EditText
+        android:id="@+id/edit_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingBottom="22dp"
+        android:hint="@string/edit_account_hint"
+        android:singleLine="true"
+        android:textColorHint="#D2D2D2"
+        android:theme="@style/BlueEditText"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:singleLine="true"
+        android:theme="@style/BlueEditText"
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingBottom="22dp"
+        android:inputType="textPassword"
+        android:textColorHint="#D2D2D2"
+        android:hint="@string/edit_password_hint"
+        android:textSize="18sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginEnd="30dp"
+            app:cardCornerRadius="3dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="false">
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/btn_unclickable_blue"
+                android:text="@string/login"
+                android:textColor="@color/text_white" />
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/fast_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/cv_login_btn"
+            android:layout_alignRight="@+id/cv_login_btn"
+            android:layout_below="@+id/cv_login_btn"
+            android:layout_marginTop="10dp"
+            android:text="@string/fast_register"
+            android:textColor="@color/text_clickable_blue"
+            android:clickable="true"
+            android:focusable="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/ad_bottom" />
+    </RelativeLayout>
+
+</LinearLayout>
