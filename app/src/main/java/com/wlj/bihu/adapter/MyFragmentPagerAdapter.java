@@ -4,7 +4,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 
 import com.wlj.bihu.fragment.FavoriteFragment;
-import com.wlj.bihu.fragment.QuestionFragment;
+import com.wlj.bihu.fragment.QuestionListFragment;
 import com.wlj.bihu.fragment.UserFragment;
 
 import android.support.v4.app.FragmentManager;
@@ -19,7 +19,7 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
     private List<Fragment> fragments = new ArrayList<>();
 
     {
-        fragments.add(new QuestionFragment());
+        fragments.add(new QuestionListFragment());
         fragments.add(new FavoriteFragment());
         fragments.add(new UserFragment());
     }

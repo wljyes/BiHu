@@ -1,6 +1,7 @@
 package com.wlj.bihu.fragment;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,17 +14,19 @@ import android.view.ViewGroup;
 import com.google.gson.Gson;
 import com.wlj.bihu.R;
 import com.wlj.bihu.adapter.QuestionListAdapter;
+import com.wlj.bihu.data.Question;
 import com.wlj.bihu.data.QuestionList;
 import com.wlj.bihu.data.User;
 import com.wlj.bihu.utils.ApiUrl;
 import com.wlj.bihu.utils.ToastUtil;
+import com.wlj.bihu.utils.UpLoadQiNiu;
 import com.wlj.bihu.utils.http.HttpCallBackListener;
 import com.wlj.bihu.utils.http.HttpUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FavoriteFragment extends BaseFragment {
+public class QuestionListFragment extends BaseFragment {
 
     @Nullable
     @Override
@@ -35,13 +38,13 @@ public class FavoriteFragment extends BaseFragment {
         List<QuestionList.DataBean.QuestionsBean> questions = new ArrayList<>();
         QuestionListAdapter adapter = new QuestionListAdapter(questions);
         recyclerView.setAdapter(adapter);
-        getFavoriteList(adapter);
+        getQuestionList(adapter);
         return view;
     }
 
-    public void getFavoriteList(final QuestionListAdapter adapter) {
+    public void getQuestionList(final QuestionListAdapter adapter) {
         String postData = "page=1&count=15&token=" + User.getUser().getToken();
-        HttpUtils.sendHttpRequest(ApiUrl.GET_QUESTIONLIST, "POST", postData, new HttpCallBackListener() {
+        HttpUtils.sendHttpRequest(ApiUrl.GET_QUESTION_LIST, "POST", postData, new HttpCallBackListener() {
             @Override
             public void onFinish(String response) {
                 Gson gson = new Gson();
@@ -63,4 +66,5 @@ public class FavoriteFragment extends BaseFragment {
             }
         });
     }
+
 }
